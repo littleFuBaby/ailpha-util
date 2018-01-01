@@ -1,0 +1,41 @@
+<!-- project maven項目配置文件的根節點 -->
+<!-- xmlns:xml命名空間類型，由配置文件得知是pom類型 -->
+<!-- xmlns:xsi:xml命名空間的xml規範實例方式 -->
+<!-- xsi:schemaLocation:表示xml規範實例的位置 -->
+<!-- xsd(xml schema difinition):xml文件的規範定義 -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<!-- maven項目模式的版本，當前為4.0.0 -->
+	<modelVersion>4.0.0</modelVersion>
+	<!-- 組織名稱 -->
+	<groupId>org.fuys</groupId>
+	<!-- 項目名稱 -->
+	<artifactId>own</artifactId>
+	<!-- 打包文件類型 -->
+	<packaging>war</packaging>
+	<!-- 項目的打包版本 -->
+	<version>0.0.1-SNAPSHOT</version>
+	<!-- 項目名稱 -->
+	<name>own Maven Webapp</name>
+	<!-- 統一資源定位，即maven的jar包遠程倉庫的路徑 -->
+	<url>http://maven.apache.org</url>
+	<!-- 項目包的依賴文件列表 -->
+	<dependencies>
+		<!-- 依賴包 -->
+		<dependency>
+			<!-- 依賴包組織名稱 -->
+			<groupId>junit</groupId>
+			<!-- 依賴包項目名稱 -->
+			<artifactId>junit</artifactId>
+			<!-- 依賴包的版本 -->
+			<version>4.11</version>
+			<!-- 依賴包的作用範圍，當前範圍為測試 -->
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+	<!-- 配置構建項目的方式 -->
+	<build>
+		<!-- 構建項目后的包的最終名稱 -->
+		<finalName>own</finalName>
+	</build>
+</project>
