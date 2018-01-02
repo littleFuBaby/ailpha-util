@@ -10,6 +10,19 @@
 
 	<!-- This part is used to learn and test configuration file of instance -->
 	
+	<!-- inject Resource interface -->
+	<bean id="springResourceTest" class="org.fuys.own.test.SpringResourceTest">
+		<property name="resource" value="classpath:log4j.properties"/>
+		<property name="resources">
+			<array>
+				<!-- <value>http://www.springframework.org/schema/beans/spring-beans.xsd</value>
+				<value>classpath:applicationContext.xml</value> -->
+				<value>classpath:**/license.txt</value>
+				<value>classpath:org/**/*.xml</value>
+			</array>
+		</property>
+	</bean>
+		
 	<!-- collection DI instance -->
 	<bean id="goods" class="org.fuys.own.vo.Goods">
 		<property name="name" value="iphone x"/>

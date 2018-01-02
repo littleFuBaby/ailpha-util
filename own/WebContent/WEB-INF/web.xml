@@ -15,8 +15,7 @@
 	<display-name>own</display-name>
 	<!-- web項目歡迎首頁文件列表 -->
 	<welcome-file-list>
-		<!-- 首頁文件，具有先後順序，
-			放置于目錄WEB-INF/下，與本xml文件同目錄 -->
+		<!-- 首頁文件，具有先後順序， 放置于目錄WEB-INF/下，與本xml文件同目錄 -->
 		<welcome-file>index.html</welcome-file>
 		<welcome-file>index.htm</welcome-file>
 		<welcome-file>index.jsp</welcome-file>
@@ -24,4 +23,8 @@
 		<welcome-file>default.htm</welcome-file>
 		<welcome-file>default.jsp</welcome-file>
 	</welcome-file-list>
+
+	<!-- <listener>
+		<listener-class>org.springframework.context.ContextLoaderListener</listener-class>
+	</listener> -->
 </web-app>

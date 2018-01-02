@@ -187,5 +187,16 @@
 	<build>
 		<!-- 構建項目后的包的最終名稱 -->
 		<finalName>own</finalName>
+			<plugins>
+			<!-- configure web.xml path(over my ability) -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.6</version>
+				<configuration>
+					<webXml>WebContent\WEB-INF\web.xml</webXml>
+				</configuration>
+			</plugin>
+		</plugins>
 	</build>
 </project>
