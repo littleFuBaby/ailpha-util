@@ -3,12 +3,61 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:p="http://www.springframework.org/schema/p"
 	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:task="http://www.springframework.org/schema/task"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
-        http://www.springframework.org/schema/context/spring-context.xsd">
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/task
+        http://www.springframework.org/schema/task/spring-task.xsd">
 
 	<!-- This part is used to learn and test configuration file of instance -->
+	<!-- test spring task -->
+	<!-- 间隔执行和Cron表达式 -->
+	<bean id="springTask" class="org.fuys.own.test.SpringTaskDemo"/>
+	<!-- <task:scheduled-tasks>
+		<task:scheduled ref="springTask" method="executeTask" fixed-delay="3000"/>
+		<task:scheduled ref="springTask" method="executeTask" cron="0/8 * * * * ?"/>
+	</task:scheduled-tasks> -->
+	
+	<!-- test Quartz -->
+	<bean id="jobFactory" class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
+		<property name="jobClass" value="org.fuys.own.test.QuartzJob"/>
+		<property name="jobDataMap">
+			<map>
+				<entry key="timeout" value="0"/>
+			</map>
+		</property>
+	</bean>
+	<bean id="methodInvokingJobFactory" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject">
+			<bean class="org.fuys.own.test.TimerDemo"/>
+		</property>
+		<property name="targetMethod" value="executeTimer"/>
+	</bean>
+	
+	<bean id="jobTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerFactoryBean">
+		<property name="jobDetail" ref="jobFactory"/>
+		<property name="startDelay" value="1"/>
+		<property name="repeatInterval" value="7000"/>
+	</bean>
+	<bean id="cronTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="jobFactory"/>
+		<property name="cronExpression" value="0/30 * * * * ?"/>
+	</bean>
+	<bean id="cronTriggerForMethodInvoking" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="methodInvokingJobFactory"/>
+		<property name="cronExpression" value="0/18 * * * * ?"/>
+	</bean>
+	<bean id="schedulerFactory" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<array>
+				<!-- <ref bean="jobTrigger"/>
+				<ref bean="cronTrigger"/>
+				<ref bean="cronTriggerForMethodInvoking"/> -->
+			</array>
+		</property>
+	</bean>
 	
 	<!-- inject Resource interface -->
 	<bean id="springResourceTest" class="org.fuys.own.test.SpringResourceTest">

@@ -180,14 +180,19 @@
 			<artifactId>mchange-commons-java</artifactId>
 			<version>0.2.14</version>
 		</dependency>
-
+		<!-- third part Quarts component -->
+		<dependency>
+			<groupId>org.quartz-scheduler</groupId>
+			<artifactId>quartz</artifactId>
+			<version>2.3.0</version>
+		</dependency>
 		<!--+++++++++++++++++++ extend jar +++++++++++++++++++ end -->
 	</dependencies>
 	<!-- 配置構建項目的方式 -->
 	<build>
 		<!-- 構建項目后的包的最終名稱 -->
 		<finalName>own</finalName>
-			<plugins>
+		<plugins>
 			<!-- configure web.xml path(over my ability) -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
