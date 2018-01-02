@@ -16,8 +16,13 @@ public class ApplicationContextTest {
 	
 	public static void main(String[] args) {
 		ApplicationContext ac = new ClassPathXmlApplicationContext("applicationContext.xml");
-		if(ac.containsBean("beanInstance")){
+		if(ac.containsBean("user")){
 			logger.info("spring core container is valid");
+			logger.info(ac.getBean("user").toString());
+			logger.info(ac.getBean("province")==null?"province is null":ac.getBean("province").toString());
+			logger.info(ac.getBean("order")==null?"order is null":ac.getBean("order").toString());
+			logger.info(ac.getBean("goods")==null?"goods is null":ac.getBean("goods").toString());
+			logger.info(ac.getBean("plan")==null?"plan is null":ac.getBean("plan").toString());
 		}
 		logger.info("test context ends");
 	}

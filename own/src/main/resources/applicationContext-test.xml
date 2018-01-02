@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- This part is used to learn and test configuration file of instance -->
+	
+	<!-- collection DI instance -->
+	<bean id="goods" class="org.fuys.own.vo.Goods">
+		<property name="name" value="iphone x"/>
+		<property name="information">
+			<map>
+				<entry>
+					<key><value>producer</value></key>
+					<value>GuangZhou factory</value>
+				</entry>
+			</map>
+		</property>
+		<property name="properties">
+			<props>
+				<prop key="price">7999.00</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<!-- p name space instance -->
+	<bean id="order" class="org.fuys.own.vo.Order" p:orderId="***" p:user-ref="user"/>
+	
+	<!-- test DI instance including reference transmission -->
+	<bean id="user" class="org.fuys.own.vo.User">
+		<constructor-arg index="0" value="andy"/>
+		<constructor-arg index="1" ref="province"/>
+	</bean>
+	<bean id="province" class="org.fuys.own.vo.Province">
+		<property name="name" value="GuiZhou"/>
+		<property name="country" ref="country"/>
+	</bean>
+	<bean id="country" class="org.fuys.own.vo.Country">
+		<property name="name">
+			<value>china</value>
+		</property>
+	</bean>
+</beans>
