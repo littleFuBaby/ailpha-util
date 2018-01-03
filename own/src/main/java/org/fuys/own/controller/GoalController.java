@@ -4,11 +4,15 @@ import java.util.Map;
 import java.util.UUID;
 import java.util.WeakHashMap;
 
+import javax.servlet.http.HttpServletRequest;
+
+import org.fuys.own.util.FilesUtil;
 import org.fuys.own.vo.Goal;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -16,6 +20,34 @@ import org.springframework.web.servlet.ModelAndView;
 public class GoalController extends AbstractController{
 	
 	private Logger logger = LoggerFactory.getLogger(GoalController.class);
+	
+	@RequestMapping("addGoalAndFile")
+	public ModelAndView addGoalAndFile(Goal goal,MultipartFile file,HttpServletRequest request){
+		ModelAndView mav = new ModelAndView("addGoalAndFile");
+		logger.info("Goal is " + goal);
+		if(file!=null){
+			logger.info("原文件名稱 :" + file.getOriginalFilename());
+			logger.info("文件名稱 :" + file.getName());
+			logger.info("文件大小 :" + file.getSize());
+			logger.info("文件類型 :" + file.getContentType());
+			// save file
+			String newFileName = null;
+			String newFilePath = null;
+			boolean savingResult = false;
+			try {
+				newFileName = FilesUtil.createFileNameToSave(file.getOriginalFilename());
+				newFilePath = request.getServletContext().getRealPath(super.getValue("own.file.diretory")) 
+						+ newFileName;
+				savingResult = FilesUtil.saveFile(file.getInputStream(), newFilePath);
+			} catch (Exception e) {
+				logger.error("save file exception." + e);
+			}
+			logger.info("newFileName=" + newFileName );
+			logger.info("newFilePath=" + newFilePath );
+			logger.info("saving result is " + savingResult );
+		}
+		return mav;
+	}
 
 	// 1、從類到方法上的整體請求路徑的簡易設置
 	@RequestMapping("/goal")
