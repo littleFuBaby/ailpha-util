@@ -14,6 +14,7 @@
 					<h1>Welcome to Own!!!</h1>
 					<h1>We hope you are happy!!!</h1>
 					<h1>Face everything and calm down!!!</h1>
+					<h1>Update SSH successfully!!!</h1>
 				</td>
 			</tr>
 		</tbody>
