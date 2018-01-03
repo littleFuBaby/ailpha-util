@@ -24,13 +24,14 @@
 		<welcome-file>default.jsp</welcome-file>
 	</welcome-file-list>
 
-	<!-- <listener>
-		<listener-class>org.springframework.context.ContextLoaderListener</listener-class>
+	<!-- Spring容器启动，并且读取上下文配置文件 -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>
 			/WEB-INF/classes/applicationContext.xml
 		</param-value>
-	</context-param> -->
+	</context-param>
 </web-app>
