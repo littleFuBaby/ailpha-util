@@ -11,7 +11,7 @@
 		<tbody align="center" valign="middle">
 			<tr>
 				<td>
-					<h1>Welcome to Own</h1>
+					<h1>Welcome to Own!</h1>
 				</td>
 			</tr>
 		</tbody>
