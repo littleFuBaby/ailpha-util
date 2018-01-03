@@ -166,6 +166,12 @@
 			<artifactId>spring-web</artifactId>
 			<version>4.3.13.RELEASE</version>
 		</dependency>
+		<!-- spring-webmvc -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>4.3.13.RELEASE</version>
+		</dependency>
 		<!--+++++++++++++++++++ spring web +++++++++++++++++++ end -->
 		<!--+++++++++++++++++++ extend jar +++++++++++++++++++ begin -->
 		<!-- c3p0 -->

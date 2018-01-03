@@ -30,8 +30,8 @@
 	
 	<!-- test spring task -->
 	<!-- 间隔执行和Cron表达式 -->
-	<bean id="springTask" class="org.fuys.own.test.SpringTaskDemo"/>
-	<!-- <task:scheduled-tasks>
+	<!-- <bean id="springTask" class="org.fuys.own.test.SpringTaskDemo"/>
+	<task:scheduled-tasks>
 		<task:scheduled ref="springTask" method="executeTask" fixed-delay="3000"/>
 		<task:scheduled ref="springTask" method="executeTask" cron="0/8 * * * * ?"/>
 	</task:scheduled-tasks> -->

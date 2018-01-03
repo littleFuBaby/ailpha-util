@@ -26,4 +26,5 @@
 
 	<!-- used to learn and test configuration file of instance -->
 	<import resource="applicationContext-test.xml"/>
+	<import resource="applicationContext-mvc.xml"/>
 </beans>
