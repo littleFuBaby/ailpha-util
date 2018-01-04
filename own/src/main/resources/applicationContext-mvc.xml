@@ -16,6 +16,14 @@
         http://www.springframework.org/schema/aop
         http://www.springframework.org/schema/aop/spring-aop.xsd">
         
+	<!-- configure handlerInterceptor -->
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/**/*"/>
+			<bean class="org.fuys.own.sys.InterceptorSys"/>
+		</mvc:interceptor>
+	</mvc:interceptors>
+	
 	<!-- configure errors.jsp -->
 	<bean id="mappingException" class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
 		<property name="exceptionMappings">
