@@ -7,3 +7,5 @@ create table user(
 	name	varchar(255) not null,
     constraint pk_uid primary key(uid)
 ) engine InnoDB;
+
+alter table user add sex int;
