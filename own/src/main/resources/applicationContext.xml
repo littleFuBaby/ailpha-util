@@ -23,8 +23,11 @@
 	<!-- configure annotation -->
 	<context:annotation-config/>
 	<context:component-scan base-package="org.fuys.own"/>
+	
+	<context:property-placeholder location="classpath:database.properties,classpath:redis.properties"/>
 
 	<!-- used to learn and test configuration file of instance -->
 	<import resource="applicationContext-test.xml"/>
 	<import resource="applicationContext-mvc.xml"/>
+	<import resource="applicationContext-mybatis.xml"/>
 </beans>

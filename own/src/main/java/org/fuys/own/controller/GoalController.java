@@ -76,7 +76,7 @@ public class GoalController extends AbstractController{
 	
 	@RequestMapping("addGoal")
 	public ModelAndView addGoal(String name){
-		Map<String, Object> map = new WeakHashMap<>();
+		Map<String, Object> map = new WeakHashMap<String, Object>();
 		map.put("goalId", UUID.randomUUID());
 		map.put("name", name);
 		ModelAndView mav = new ModelAndView("goal");

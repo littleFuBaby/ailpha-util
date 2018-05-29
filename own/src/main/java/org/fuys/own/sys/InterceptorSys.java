@@ -17,20 +17,17 @@ public class InterceptorSys implements HandlerInterceptor{
 	
 	private Logger logger = LoggerFactory.getLogger(InterceptorSys.class);
 
-	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {
 		logger.info("<<<<<< before method of controller >>>>>>" + handler.getClass());
 		return true;
 	}
 
-	@Override
 	public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler,
 			ModelAndView modelAndView) throws Exception {
 		logger.info("<<<<<< post method of controller >>>>>>" + handler.getClass());
 	}
 
-	@Override
 	public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex)
 			throws Exception {
 		logger.info("<<<<<< after method of controller >>>>>>" + handler.getClass());

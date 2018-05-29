@@ -29,32 +29,32 @@ public class AOPAnnotation {
 		logger.info(" -----> before advice with arg <----- " + obj);
 	}
 	
-	@After(value="execution(public * org.fuys.own..*.*(..))")
-	public void sayAfter(){
-		logger.info(" ****** after advice ****** Time to say goodbye.");
-	}
+//	@After(value="execution(public * org.fuys.own..*.*(..))")
+//	public void sayAfter(){
+//		logger.info(" ****** after advice ****** Time to say goodbye.");
+//	}
 	
-	@AfterReturning(value="execution(public * org.fuys.own..*.*(..))",returning="r",argNames="r")
-	public void sayAfterReturning(Object obj){
-		logger.info(" -----> after returning advice <----- " + obj);
-	}
+//	@AfterReturning(value="execution(public * org.fuys.own..*.*(..))",returning="r",argNames="r")
+//	public void sayAfterReturning(Object obj){
+//		//logger.info(" -----> after returning advice <----- " + obj);
+//	}
 	
-	@AfterThrowing(value="execution(public * org.fuys.own..*.*(..))",throwing="e",argNames="e")
-	public void sayAfterthrow(Exception e){
-		logger.error(" >>>> after throwing <<<<" + e.toString());
-	}
+//	@AfterThrowing(value="execution(public * org.fuys.own..*.*(..))",throwing="e",argNames="e")
+//	public void sayAfterthrow(Exception e){
+//		//logger.error(" >>>> after throwing <<<<" + e.toString());
+//	}
 	
 	/**
-	 * 环绕通知
-	 * @param point 传递参数的对象
+	 * 鐜粫閫氱煡
+	 * @param point 浼犻�掑弬鏁扮殑瀵硅薄
 	 * @throws Throwable 
 	 */
-	@Around("execution(public * org.fuys.own..*.*(..))")
-	public void sayArroundAdvice(ProceedingJoinPoint point) throws Throwable{
-		// 通过ProceedingJoinPoint对象进行参数的传递
-		logger.info("++++++++ args is " + Arrays.toString(point.getArgs()));
-		Object obj = point.proceed(point.getArgs());
-		logger.info("Result is " + obj);
-	}
+//	@Around("execution(public * org.fuys.own..*.*(..))")
+//	public void sayArroundAdvice(ProceedingJoinPoint point) throws Throwable{
+//		// 閫氳繃ProceedingJoinPoint瀵硅薄杩涜鍙傛暟鐨勪紶閫�
+//		//logger.info("++++++++ args is " + Arrays.toString(point.getArgs()));
+//		//Object obj = point.proceed(point.getArgs());
+//		//logger.info("Result is " + obj);
+//	}
 
 }
