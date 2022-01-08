@@ -1,5 +1,4 @@
-# statement
-Welcome to the own project.
+**Welcome to the project.**
 
 The own is a large repository. The purpose is to build project to serve people. 
 
