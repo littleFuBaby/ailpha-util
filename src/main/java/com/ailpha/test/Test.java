@@ -15,6 +15,7 @@ public class Test {
         int head = 0, tail = 0;
         while (head < s.length() && tail < s.length()) {
             if (s.charAt(head) != s.charAt(tail)) {
+                //sum += sum(s.substring(head, tail));
                 sum += sum2(tail - head);
                 head = tail;
                 continue;
