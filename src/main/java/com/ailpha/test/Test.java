@@ -3,6 +3,18 @@ package com.ailpha.test;
 public class Test {
 
     public static void main(String[] args) {
+
+        String[] strings1 = "123".split("\\d+");
+        System.out.println(strings1.length);
+
+        String[] strings = "abbcccaa".split("[a-z]*");
+
+        System.out.println(strings.length);
+        for (String s : strings) {
+            System.out.print(s + " ");
+        }
+
+
         System.out.println(countHomogenous("z"));
         System.out.println(countHomogenous("zzzzz"));
         System.out.println(countHomogenous("xy"));
