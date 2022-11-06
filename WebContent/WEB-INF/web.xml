@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 對於各個節點的理解可根據英文原意進行解釋，這是最好的方式 -->
+<!-- XML文件，版本1.0，編碼UTF8，該説明衹可放置于標記之下 -->
+<!-- web-app:web應用程序根節點 -->
+<!-- xmlns:xsi即xml命名空間的xml規範實例方式 -->
+<!-- xmlns:xml命名空間類型 -->
+<!-- xsi:schemaLocation:xml規範實例的規範位置 -->
+<!-- id:web應用的標記 -->
+<!-- version:web應用服務器的版本 -->
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<!-- web項目名稱 -->
+	<display-name>own</display-name>
+	<!-- web項目歡迎首頁文件列表 -->
+	<welcome-file-list>
+		<!-- 首頁文件，具有先後順序， 放置于目錄WEB-INF/下，與本xml文件同目錄 -->
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+
+	<!-- Spring容器启动，并且读取上下文配置文件 -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+			/WEB-INF/classes/applicationContext.xml
+		</param-value>
+	</context-param>
+
+	<!-- SpringMVC的web程序支持，即处理用户请求等控制层操作 -->
+	<servlet>
+		<servlet-name>springMVC</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>classpath:applicationContext-mvc.xml</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>springMVC</servlet-name>
+		<url-pattern>/</url-pattern>
+		<!-- <url-pattern>*.action</url-pattern> -->
+	</servlet-mapping>
+	<listener>
+		<listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+	</listener>
+
+	<!-- Spring过滤器 -->
+	<filter>
+		<filter-name>encoding</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>encoding</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+</web-app>
