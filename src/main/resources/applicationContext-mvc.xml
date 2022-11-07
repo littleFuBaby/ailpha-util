@@ -20,7 +20,7 @@
 	<mvc:interceptors>
 		<mvc:interceptor>
 			<mvc:mapping path="/**/*"/>
-			<bean class="org.fuys.own.sys.InterceptorSys"/>
+			<bean class="com.ailpha.sys.InterceptorSys"/>
 		</mvc:interceptor>
 	</mvc:interceptors>
 	

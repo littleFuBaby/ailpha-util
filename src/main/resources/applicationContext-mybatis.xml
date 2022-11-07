@@ -84,7 +84,7 @@
 	</bean>
 
 	<bean id="dataSource"
-		class="org.fuys.own.common.datasource.DynamicDataSource">
+		class="com.ailpha.common.datasource.DynamicDataSource">
 		<property name="targetDataSources">
 			<map>
 				<entry key="slave" value-ref="slavedataSource" />
@@ -106,7 +106,7 @@
 	</bean>
 
 	<bean id="dataSourceChoose"
-		class="org.fuys.own.common.datasource.DataSourceChoose" />
+		class="com.ailpha.common.datasource.DataSourceChoose" />
 
 	<aop:config expose-proxy="true">
 		<aop:pointcut

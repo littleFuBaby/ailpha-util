@@ -3,9 +3,9 @@ package own.test;
 import java.util.List;
 import java.util.concurrent.locks.LockSupport;
 
-import org.fuys.own.service.UserService;
-import org.fuys.own.util.JedisUtil;
-import org.fuys.own.vo.User;
+import com.ailpha.service.UserService;
+import com.ailpha.util.JedisUtil;
+import com.ailpha.vo.User;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;

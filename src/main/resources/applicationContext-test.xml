@@ -30,7 +30,7 @@
 	
 	<!-- test spring task -->
 	<!-- 间隔执行和Cron表达式 -->
-	<!-- <bean id="springTask" class="org.fuys.own.test.SpringTaskDemo"/>
+	<!-- <bean id="springTask" class="SpringTaskDemo"/>
 	<task:scheduled-tasks>
 		<task:scheduled ref="springTask" method="executeTask" fixed-delay="3000"/>
 		<task:scheduled ref="springTask" method="executeTask" cron="0/8 * * * * ?"/>
@@ -38,7 +38,7 @@
 	
 	<!-- test Quartz -->
 	<bean id="jobFactory" class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
-		<property name="jobClass" value="org.fuys.own.test.QuartzJob"/>
+		<property name="jobClass" value="com.ailpha.test.QuartzJob"/>
 		<property name="jobDataMap">
 			<map>
 				<entry key="timeout" value="0"/>
@@ -47,7 +47,7 @@
 	</bean>
 	<bean id="methodInvokingJobFactory" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
 		<property name="targetObject">
-			<bean class="org.fuys.own.test.TimerDemo"/>
+			<bean class="com.ailpha.test.TimerDemo"/>
 		</property>
 		<property name="targetMethod" value="executeTimer"/>
 	</bean>
@@ -76,7 +76,7 @@
 	</bean>
 	
 	<!-- inject Resource interface -->
-	<bean id="springResourceTest" class="org.fuys.own.test.SpringResourceTest">
+	<bean id="springResourceTest" class="com.ailpha.test.SpringResourceTest">
 		<property name="resource" value="classpath:log4j.properties"/>
 		<property name="resources">
 			<array>
@@ -89,7 +89,7 @@
 	</bean>
 		
 	<!-- collection DI instance -->
-	<bean id="goods" class="org.fuys.own.vo.Goods">
+	<bean id="goods" class="com.ailpha.vo.Goods">
 		<property name="name" value="iphone x"/>
 		<property name="information">
 			<map>
@@ -107,18 +107,18 @@
 	</bean>
 	
 	<!-- p name space instance -->
-	<bean id="order" class="org.fuys.own.vo.Order" p:orderId="***" p:user-ref="user"/>
+	<bean id="order" class="com.ailpha.vo.Order" p:orderId="***" p:user-ref="user"/>
 	
 	<!-- test DI instance including reference transmission -->
-	<bean id="user" class="org.fuys.own.vo.User">
+	<bean id="user" class="com.ailpha.vo.User">
 		<constructor-arg index="0" value="andy"/>
 		<constructor-arg index="1" ref="province"/>
 	</bean>
-	<bean id="province" class="org.fuys.own.vo.Province">
+	<bean id="province" class="com.ailpha.vo.Province">
 		<property name="name" value="GuiZhou"/>
 		<property name="country" ref="country"/>
 	</bean>
-	<bean id="country" class="org.fuys.own.vo.Country">
+	<bean id="country" class="com.ailpha.vo.Country">
 		<property name="name">
 			<value>china</value>
 		</property>
