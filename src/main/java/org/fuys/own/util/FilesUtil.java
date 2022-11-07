@@ -9,6 +9,10 @@ import java.util.UUID;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * 文件操作类
+ *
+ */
 public class FilesUtil {
 	
 	private static Logger logger = LoggerFactory.getLogger(FilesUtil.class);
