@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.concurrent.locks.LockSupport;
 
 import com.ailpha.service.UserService;
-import com.ailpha.util.JedisUtil;
+import com.ailpha.common.util.JedisUtil;
 import com.ailpha.vo.User;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package com.ailpha.util;
+package com.ailpha.common.util;
 
 import redis.clients.jedis.Jedis;
 

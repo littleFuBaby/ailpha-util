@@ -7,7 +7,7 @@ import java.util.WeakHashMap;
 import javax.servlet.http.HttpServletRequest;
 
 import com.ailpha.vo.Goal;
-import com.ailpha.util.FilesUtil;
+import com.ailpha.common.util.FilesUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
