@@ -3,7 +3,7 @@ package com.ailpha.common.cache;
 /**
  * Redis config Information
  *
- * @author andy
+ * @author ailpha
  */
 public class RedisConfig {
 }

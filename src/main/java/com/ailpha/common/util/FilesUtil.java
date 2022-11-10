@@ -12,6 +12,8 @@ import org.slf4j.LoggerFactory;
 /**
  * 文件操作类
  *
+ * @author ailpha
+ *
  */
 public class FilesUtil {
 	
