@@ -6,6 +6,8 @@ package com.ailpha.common.util;
  *
  */
 public class StringUtils {
+
+	public static final String EMPTY = "";
 	
 	/**
 	 * if string is null or "" or "  "
