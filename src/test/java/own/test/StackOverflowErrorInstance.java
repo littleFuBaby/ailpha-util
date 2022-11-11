@@ -1,15 +1,11 @@
 package own.test;
-
 /**
  * 栈溢出错误示例
- *
  * @author andy
  */
 public class StackOverflowErrorInstance {
-
     /**
      * 递归方法
-     *
      * @param x
      * @return
      */
@@ -20,9 +16,7 @@ public class StackOverflowErrorInstance {
         }
         return recurse(x++);
     }
-
     public static void main(String[] args) {
         recurse(Integer.MIN_VALUE);
     }
-
 }
