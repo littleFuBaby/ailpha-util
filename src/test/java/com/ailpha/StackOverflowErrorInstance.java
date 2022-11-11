@@ -1,4 +1,7 @@
 package com.ailpha;
+
+import java.util.HashMap;
+
 /**
  * 栈溢出错误示例
  * @author andy
@@ -18,5 +21,7 @@ public class StackOverflowErrorInstance {
     }
     public static void main(String[] args) {
         recurse(Integer.MIN_VALUE);
+        HashMap map = new HashMap();
+        //map.put()
     }
 }
