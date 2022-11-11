@@ -18,7 +18,7 @@ public class EmojiUtil {
 			return str;
 		}
 		String pattern = "[\ud83c\udc00-\ud83c\udfff]|[\ud83d\udc00-\ud83d\udfff]|[\u2600-\u27ff]";
-		String reStr = StringUtils.isNotEmpty(newRepStr)?newRepStr:"";
+		String reStr = StringUtils.isEmpty(newRepStr)?newRepStr:"";
 		Pattern emoji = Pattern.compile(pattern);
 		Matcher emojiMatcher = emoji.matcher(str);
 		str = emojiMatcher.replaceAll(reStr);

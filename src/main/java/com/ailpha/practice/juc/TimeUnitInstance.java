@@ -1,6 +1,6 @@
 package com.ailpha.practice.juc;
 
-import com.ailpha.util.DateUtils;
+import com.ailpha.common.util.DateUtils;
 
 import java.util.Calendar;
 import java.util.Date;

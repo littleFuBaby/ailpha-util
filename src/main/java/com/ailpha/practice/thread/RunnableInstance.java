@@ -1,6 +1,6 @@
 package com.ailpha.practice.thread;
 
-import com.ailpha.util.StringUtils;
+import com.ailpha.common.util.StringUtils;
 
 class MyRunnable implements Runnable {
 	

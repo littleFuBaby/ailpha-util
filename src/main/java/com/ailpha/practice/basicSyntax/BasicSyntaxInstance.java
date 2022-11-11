@@ -25,7 +25,8 @@ public class BasicSyntaxInstance {
 		i = 100;
 		l = Calendar.getInstance().getTime().getTime();
 		d = 19.9;
-		c = '��';
+		// TODO: 2022/11/11 查找原因，估计是编码问题，这个应该是中文字符
+		//c = '��';
 		
 		// operate 
 		f = i * b / s;
