@@ -9,8 +9,8 @@ import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 /**
- * common date utility
- * @author ys
+ * Date Utils
+ * @author ailpha
  *
  */
 public class DateUtils {
