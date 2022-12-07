@@ -8,7 +8,5 @@ public class StringTest {
         for (String s : array) {
             System.out.println(s);
         }
-
     }
-
 }
