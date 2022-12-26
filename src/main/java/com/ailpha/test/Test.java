@@ -4,6 +4,12 @@ public class Test {
 
     public static void main(String[] args) {
 
+        String[] str1 = "234233".split("(()+)|");
+        System.out.println(str1.length);
+        for (String s : str1) {
+            System.out.print(s + " =");
+        }
+
         String[] str = "abcdfifjabcabcdfkabcabckgflh".split("(abc)+");
 
         System.out.println(str.length);
