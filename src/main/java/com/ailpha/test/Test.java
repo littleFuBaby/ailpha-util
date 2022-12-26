@@ -4,10 +4,15 @@ public class Test {
 
     public static void main(String[] args) {
 
+        String[] str = "abcdfifjabcabcdfkabcabckgflh".split("(abc)+");
+
+        System.out.println(str.length);
+
         String[] strings1 = "123".split("\\d+");
         System.out.println(strings1.length);
 
-        String[] strings = "abbcccaa".split("[a-z]*");
+        //String[] strings = "abbcccaa".split("[a-z]*");
+        String[] strings = "abbcccaa".split("(?<=\\D)(?=\\d)|(?<=\\d)(?=\\D)");
 
         System.out.println(strings.length);
         for (String s : strings) {
