@@ -1,8 +1,17 @@
 package com.ailpha.test;
 
+import java.util.HashMap;
+import java.util.Hashtable;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
 public class Test {
 
     public static void main(String[] args) {
+
+        Map<Object, Object> map = new Hashtable<>();
+        map = new HashMap<>();
+        map = new ConcurrentHashMap<>();
 
         String[] str1 = "234233".split("(()+)|");
         System.out.println(str1.length);
