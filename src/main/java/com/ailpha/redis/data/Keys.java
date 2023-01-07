@@ -1,8 +1,8 @@
 package com.ailpha.redis.data;
 
-import java.util.Set;
+import com.ailpha.redis.util.JedisUtil;
 
-import org.fuys.ownredis.util.JedisUtil;
+import java.util.Set;
 
 public class Keys {
 

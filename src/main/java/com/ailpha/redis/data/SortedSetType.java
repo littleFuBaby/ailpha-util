@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
-import org.fuys.ownredis.util.JedisUtil;
+import com.ailpha.redis.util.JedisUtil;
 
 import redis.clients.jedis.Tuple;
 

@@ -1,6 +1,6 @@
 package com.ailpha.redis.data;
 
-import org.fuys.ownredis.util.JedisUtil;
+import com.ailpha.redis.util.JedisUtil;
 
 public class SetType {
 

@@ -1,8 +1,8 @@
 package com.ailpha.redis.data;
 
-import java.util.List;
+import com.ailpha.redis.util.JedisUtil;
 
-import org.fuys.ownredis.util.JedisUtil;
+import java.util.List;
 
 public class ListType {
 
