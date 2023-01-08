@@ -1,5 +1,6 @@
 package com.ailpha.test;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.Map;
@@ -8,6 +9,10 @@ import java.util.concurrent.ConcurrentHashMap;
 public class Test {
 
     public static void main(String[] args) {
+
+        int[] nums = {672579538,806947365,854095676,815137524};
+        int k = 3;
+        System.out.println(maxKelements(nums, 3));
 
         Map<Object, Object> map = new Hashtable<>();
         map = new HashMap<>();
@@ -39,6 +44,45 @@ public class Test {
         System.out.println(countHomogenous("zzzzz"));
         System.out.println(countHomogenous("xy"));
         System.out.println(countHomogenous("abbcccaa"));
+    }
+
+    public static long maxKelements(int[] nums, int k) {
+        long sum = 0;
+        int n = nums.length;
+        for (int i=0; i<k; i++) {
+            //Arrays.sort(nums);
+            int j = 0;
+            int max= 0;
+            int maxIndex = 0;
+            while (j < nums.length) {
+                if (nums[j] > max) {
+                    max = nums[j];
+                    maxIndex = j;
+                }
+                j++;
+            }
+            //sum += nums[n - 1];
+            sum += nums[maxIndex];
+            double c = nums[maxIndex];
+            double d = Math.ceil(c / 3);
+            int e =  (int) d;
+            nums[maxIndex] = e;
+        }
+        return sum;
+    }
+
+    public static long maxKelements2(int[] nums, int k) {
+        long sum = 0;
+        int n = nums.length;
+        for (int i=0; i<k; i++) {
+            Arrays.sort(nums);
+            sum += nums[n - 1];
+            double c = nums[n - 1];
+            double d = Math.ceil(c / 3);
+            int e =  (int) d;
+            nums[n - 1] = e;
+        }
+        return sum;
     }
 
     public static int countHomogenous(String s) {
