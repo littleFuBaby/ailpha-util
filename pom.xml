@@ -21,7 +21,7 @@
 	<!-- 統一資源定位，即maven的jar包遠程倉庫的路徑 -->
 	<url>http://maven.apache.org</url>
 	<properties>
-		<spring-lib-version>5.0.2.RELEASE</spring-lib-version>
+		<spring-lib-version>5.2.22.RELEASE</spring-lib-version>
 	</properties>
 	<!-- 項目包的依賴文件列表 -->
 	<dependencies>
