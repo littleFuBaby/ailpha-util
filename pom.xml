@@ -11,7 +11,7 @@
 	<!-- 組織名稱 -->
 	<groupId>com.ailpha</groupId>
 	<!-- 項目名稱 -->
-	<artifactId>ailpha</artifactId>
+	<artifactId>ailpha-util</artifactId>
 	<!-- 打包文件類型 -->
 	<packaging>war</packaging>
 	<!-- 項目的打包版本 -->
