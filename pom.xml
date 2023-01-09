@@ -9,9 +9,9 @@
 	<!-- maven項目模式的版本，當前為4.0.0 -->
 	<modelVersion>4.0.0</modelVersion>
 	<!-- 組織名稱 -->
-	<groupId>org.fuys</groupId>
+	<groupId>com.ailpha</groupId>
 	<!-- 項目名稱 -->
-	<artifactId>own</artifactId>
+	<artifactId>ailpha</artifactId>
 	<!-- 打包文件類型 -->
 	<packaging>war</packaging>
 	<!-- 項目的打包版本 -->
