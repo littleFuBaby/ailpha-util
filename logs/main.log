@@ -132,3 +132,9 @@ java.lang.OutOfMemoryError: Java heap space
 2022-11-12 11:40:22,798 +0800 [main] INFO  (PhantomReferenceDemo.java:30) - 垃圾回收后的引用队列的对象情况：null
 2022-11-12 11:41:42,274 +0800 [main] INFO  (PhantomReferenceDemo.java:26) - 引用队列的对象情况：null
 2022-11-12 11:41:42,288 +0800 [main] INFO  (PhantomReferenceDemo.java:30) - 垃圾回收后的引用队列的对象情况：null
+2023-01-16 17:56:35,863 +0800 [main] INFO  (HttpUtil.java:64) - sendGet - https://leetcode.cn/problems/sentence-similarity-iii/solutions/2064583/1813-ju-zi-xiang-si-xing-iii-shuang-zhi-pb719/?
+2023-01-16 17:56:36,888 +0800 [main] INFO  (HttpUtil.java:76) - recv - <html><head><title>302 Found</title></head><body><center><h1>302 Found</h1></center><hr><center>openresty</center></body></html>
+2023-01-16 17:58:18,981 +0800 [main] INFO  (HttpUtil.java:65) - sendGet - https://leetcode.cn/problems/sentence-similarity-iii/solutions/2064583/1813-ju-zi-xiang-si-xing-iii-shuang-zhi-pb719/?
+2023-01-16 17:58:19,858 +0800 [main] INFO  (HttpUtil.java:77) - recv - <html><head><title>302 Found</title></head><body><center><h1>302 Found</h1></center><hr><center>openresty</center></body></html>
+2023-01-16 17:58:19,858 +0800 [main] INFO  (HttpUtil.java:110) - sendPost - https://leetcode.cn/problems/sentence-similarity-iii/solutions/2064583/1813-ju-zi-xiang-si-xing-iii-shuang-zhi-pb719/
+2023-01-16 17:58:19,911 +0800 [main] INFO  (HttpUtil.java:128) - recv - <html><head><title>302 Found</title></head><body><center><h1>302 Found</h1></center><hr><center>openresty</center></body></html>
